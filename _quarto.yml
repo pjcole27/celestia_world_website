@@ -1,0 +1,24 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  title: "celestia_world_final"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+
