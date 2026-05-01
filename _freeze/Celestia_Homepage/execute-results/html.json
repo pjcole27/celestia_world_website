@@ -1,0 +1,15 @@
+{
+  "hash": "719edeb5e04ac8adff14b0ab6915aa8f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Celestia's World\n---\n\"My throat troubles me considerable this winter. I begin to be afraid that it is going to be something serious. It hurts me to talk after talking so much in school, I have been very quiet.\" \n\tCelestia Webster - January 9, 1867\n\t\n\t\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
