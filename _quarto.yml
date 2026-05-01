@@ -11,6 +11,11 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - Webster_Fam.qmd
+      - Map_C_Network.qmd
+      - Map_C_Boarding.qmd
+      - Map_C_Zerviah.qmd
+  
 
 format:
   html:
