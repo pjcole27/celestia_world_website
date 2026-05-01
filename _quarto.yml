@@ -5,7 +5,7 @@ execute:
   freeze: auto
 
 website:
-  title: "celestia_world_final"
+  title: "Celestia's World"
   navbar:
     left:
       - href: index.qmd
