@@ -5,3 +5,38 @@ title: Mapping Trips to Aunt Zerviah's
 *"They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early"*
 
 **Celestia Webster's Diary - November 13, 1867**
+
+## Trips to Aunt Zerviah
+
+```{r}
+library(sf)
+library(tidygeocoder)
+library(USAboundaries)
+library(tidyverse)
+
+"Geocode locations"
+locations <- geo(c("Conesus"))
+locations
+
+"Convert locations to sf object"
+locations_sf <- st_as_sf(locations, coords = c("long", "lat"), crs = 4326)
+locations_sf
+
+"Get a Base Map"
+newyork <- us_counties(states = "New York")
+
+"Reproject the data"
+# Find EPSG code for New York
+state_plane(state = "NY")
+
+# Project
+newyork_proj <- st_transform(newyork, "EPSG:32116")
+
+# Map the data
+ggplot() + 
+  geom_sf(data = newyork_proj) + 
+  labs(title = "Map of New York counties",
+       subtitle = "Conesus, Livingston County, New York") + 
+  theme_minimal()
+```
+
