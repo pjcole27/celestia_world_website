@@ -5,3 +5,6 @@
 /.quarto/
 /_site/
 **/*.quarto_ipynb
+data-raw/
+*_files/
+*.html
