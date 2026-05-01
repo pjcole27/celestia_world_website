@@ -42,3 +42,31 @@ ggplot() +
   theme_minimal()
 ```
 
+
+```
+# Mapping with lines
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(paletteer)
+install.packages("readxl")
+library(readxl)
+
+# Reading in Data 
+
+read_excel("Z_locations.xlsx")
+read_excel("Z_movements.xlsx")
+
+# Making Objects
+
+movements <- read_csv("Z_movements.xlsx")
+locations <- read_csv("Z_locations.xlsx")
+
+#| label: locations_sf
+locations_sf <- st_as_sf(locations,
+                         coords = c("lng", "lat"),
+                         crs = 4326)
+```
+
+
+
