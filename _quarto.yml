@@ -6,6 +6,7 @@ execute:
 
 website:
   title: "Celestia's World"
+  page-footer: Paige Cole - Digital History
   navbar:
     left:
       - href: index.qmd
