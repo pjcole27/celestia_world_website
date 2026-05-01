@@ -9,6 +9,8 @@ title: Mapping Trips to Aunt Zerviah's
 ## Trips to Aunt Zerviah
 
 ```{r}
+#Creating Base Map
+
 library(sf)
 library(tidygeocoder)
 library(USAboundaries)
