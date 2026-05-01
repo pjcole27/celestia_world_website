@@ -15,7 +15,6 @@ website:
       - Map_C_Boarding.qmd
       - Map_C_Zerviah.qmd
       - about.qmd
-  
 
 format:
   html:
