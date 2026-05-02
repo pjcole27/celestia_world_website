@@ -34,10 +34,13 @@ newyork_proj <- st_transform(newyork, "EPSG:32116")
 ggplot() + 
   geom_sf(data = newyork_proj) + 
   geom_sf(data = locs_proj) + 
-  labs(title = "Map of Virginia counties",
-       subtitle = "With points showing the locations of Blacksburg and Charlottesville") + 
+  labs(title = "Celestia's Network in Livingston County")
   theme_minimal()
 
 
+
+
+ 
+  
 
 ```
