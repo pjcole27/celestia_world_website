@@ -7,36 +7,6 @@ title: Mapping Celestia's Network
 **Celestia Webster's Diary - May 17, 1867**
 
 ```{r}
-library(sf)
-library(tidygeocoder)
-library(USAboundaries)
-library(tidyverse)
-
-# Geocode Locations
-
-locations <- geo(c("Conesus", "Hemlock", "Springwater", "Livonia"))
-locations
-
-# Convert locations to sf
-locations_sf <- st_as_sf(locations, coords = c("long", "lat"), crs = 4326)
-locations_sf
-
-# Get a Base Map
-newyork <- us_counties(states = "New York")
-
-# Find EPSG code for Virginia
-state_plane(state = "NY")
-
-# Reproject the data 
-locs_proj <- st_transform(locs, "EPSG:32116")
-newyork_proj <- st_transform (newyork, "EPSG:32116")
-
-# Map the data
-ggplot() + 
-  geom_sf(data = newyork_proj) + 
-  labs(title = "Map of New York counties",
-       subtitle = "With points showing the locations of Conesus, Hemlock, Springwater,Livonia") + 
-  theme_minimal()
 
   
 ```
