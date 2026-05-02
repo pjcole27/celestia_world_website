@@ -36,11 +36,6 @@ ggplot() +
   geom_sf(data = locs_proj) + 
   labs(title = "Celestia's Network in Livingston County")
   theme_minimal()
-
-
-
-
- 
-  
-
 ```
+
+Need to zoom into livingston county

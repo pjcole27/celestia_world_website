@@ -1,11 +1,9 @@
 {
-  "hash": "a021b8c31818afec18b38889ea7278ab",
+  "hash": "03c8bf7246d70de77209fc401592944c",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: Mapping Trips to Aunt Zerviah's\n---\n\n*\"They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early\"*\n\n**Celestia Webster's Diary - November 13, 1867**\n\n\n\n## Map of Trips to Aunt Zerviah\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Getting library\nlibrary(ggplot2)\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.0     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ lubridate 1.9.5     ✔ tibble    3.3.1\n✔ purrr     1.2.1     ✔ tidyr     1.3.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n\n",
-    "supporting": [
-      "Map_C_Zerviah_files"
-    ],
+    "markdown": "---\ntitle: Mapping Trips to Aunt Zerviah's\n---\n\n*\"They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early\"*\n\n**Celestia Webster's Diary - November 13, 1867**\n\n## Map of Trips to Aunt Zerviah\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Getting library\nlibrary(ggplot2)\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.0     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ lubridate 1.9.5     ✔ tibble    3.3.1\n✔ purrr     1.2.1     ✔ tidyr     1.3.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
