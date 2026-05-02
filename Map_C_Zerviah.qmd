@@ -6,8 +6,6 @@ title: Mapping Trips to Aunt Zerviah's
 
 **Celestia Webster's Diary - November 13, 1867**
 
-
-
 ## Map of Trips to Aunt Zerviah
 
 ```{r}
@@ -17,4 +15,3 @@ library(tidyverse)
 
 
 ```
-
