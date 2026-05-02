@@ -198,19 +198,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="map-of-trips-to-aunt-zerviah" class="level2">
 <h2 class="anchored" data-anchor-id="map-of-trips-to-aunt-zerviah">Map of Trips to Aunt Zerviah</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Getting library</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.2.0     ✔ readr     2.2.0
-✔ forcats   1.0.1     ✔ stringr   1.6.0
-✔ lubridate 1.9.5     ✔ tibble    3.3.1
-✔ purrr     1.2.1     ✔ tidyr     1.3.2
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"library(sf)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">library(tidygeocoder)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">library(USAboundaries)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">library(tidyverse)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">library(leaflet)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">library(paletteer)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">zlocations &lt;- read.csv(z_locations.csv)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">zmovements &lt;- read.csv(z_movements.csv)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">zlocations_sf &lt;- st_as_sf(zlocations,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">                         coords = c(lng, lat),</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">                         crs = 4326)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">zmovements_wide &lt;- zmovements |&gt; </span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">  arrange(date) |&gt; </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">  group_by(person) |&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">  ungroup() |&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">  filter(!is.na(start)) |&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">    rowid_to_column(journeyid)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">zmovements_long &lt;- zmovements_wide |&gt; </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">  pivot_longer(</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">    cols = start:destination,</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="st">    names_to = type,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="st">    values_to = location</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="st">  )</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="st">zmovements_long_sf &lt;- zmovements_long |&gt; </span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="st">  left_join(zlocations, by = location) |&gt; </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="st">  st_as_sf(coords = c(lng, lat), crs = 4326) |&gt; </span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="st">  group_by(journey_id) |&gt; </span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="st">  summarise(do_union = FALSE) |&gt; </span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="st">  st_cast(LINESTRING)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="st">journeys_sf &lt;- left_join(zmovements_long_sf, zmovements_wide, by = journey_id)</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">journeys_sf</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st">journeys_sf &lt;- journeys_sf |&gt; </span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st">  mutate(label = paste (</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">    person, &lt;br/&gt;,</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="st">    start, to, destination, &lt;br&gt;,</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="st">    year(date),day(date), month(date, label = TRUE)))</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="st">pal &lt;- colorFactor(</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="st">  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="st">  domain = journeys_sf$person)</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="st">leaflet() |&gt; </span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="st">  addTiles() |&gt;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="st">  addPolylines(data = journeys_sf,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="st">               color = ~pal(person),</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="st">               opacity = 0.8,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="st">               label = ~person) |&gt; </span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="st">  addCircleMarkers(data = zlocations_sf,</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="st">                   fillOpacity = 0.5,</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="st">                   radius = 5,</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="st">                   label = ~location) |&gt; </span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="st">  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "library(sf)\nlibrary(tidygeocoder)\nlibrary(USAboundaries)\nlibrary(tidyverse)\nlibrary(leaflet)\nlibrary(paletteer)\n\nzlocations &lt;- read.csv(z_locations.csv)\nzmovements &lt;- read.csv(z_movements.csv)\n\nzlocations_sf &lt;- st_as_sf(zlocations,\n                         coords = c(lng, lat),\n                         crs = 4326)\nzmovements_wide &lt;- zmovements |&gt; \n  arrange(date) |&gt; \n  group_by(person) |&gt;\n  ungroup() |&gt;\n  filter(!is.na(start)) |&gt;\n    rowid_to_column(journeyid)\n\nzmovements_long &lt;- zmovements_wide |&gt; \n  pivot_longer(\n    cols = start:destination,\n    names_to = type,\n    values_to = location\n  )\n\nzmovements_long_sf &lt;- zmovements_long |&gt; \n  left_join(zlocations, by = location) |&gt; \n  st_as_sf(coords = c(lng, lat), crs = 4326) |&gt; \n  group_by(journey_id) |&gt; \n  summarise(do_union = FALSE) |&gt; \n  st_cast(LINESTRING)\n\njourneys_sf &lt;- left_join(zmovements_long_sf, zmovements_wide, by = journey_id)\njourneys_sf\n\njourneys_sf &lt;- journeys_sf |&gt; \n  mutate(label = paste (\n    person, &lt;br/&gt;,\n    start, to, destination, &lt;br&gt;,\n    year(date),day(date), month(date, label = TRUE)))\n\npal &lt;- colorFactor(\n  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),\n  domain = journeys_sf$person)\n\nleaflet() |&gt; \n  addTiles() |&gt;\n  addPolylines(data = journeys_sf,\n               color = ~pal(person),\n               opacity = 0.8,\n               label = ~person) |&gt; \n  addCircleMarkers(data = zlocations_sf,\n                   fillOpacity = 0.5,\n                   radius = 5,\n                   label = ~location) |&gt; \n  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"</code></pre>
 </div>
 </div>
 
