@@ -6,8 +6,38 @@ title: Mapping Celestia's Network
 
 **Celestia Webster's Diary - May 17, 1867**
 
+## C's Network
+
 ```{r}
+library(sf)
+library(tidygeocoder)
+library(USAboundaries)
+library(tidyverse)
 
-  
+cnetwork <- read.csv("C_Network.csv")
+
+locations <- geo(c("Conesus", "Livonia", "Springwater", "Hemlock"))
+locations
+
+locations_sf <- st_as_sf(cnetwork, coords = c("lng", "lat"), crs = 4326)
+locations_sf
+
+newyork <- us_counties(states = "New York")
+
+# Find EPSG code for New York
+state_plane(state = "NY")
+
+# Project
+locs_proj <- st_transform(locations_sf, "EPSG:32146")
+newyork_proj <- st_transform(newyork, "EPSG:32116")
+
+ggplot() + 
+  geom_sf(data = newyork_proj) + 
+  geom_sf(data = locs_proj) + 
+  labs(title = "Map of Virginia counties",
+       subtitle = "With points showing the locations of Blacksburg and Charlottesville") + 
+  theme_minimal()
+
+
+
 ```
-
