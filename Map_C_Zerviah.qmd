@@ -8,51 +8,51 @@ title: Mapping Trips to Aunt Zerviah's
 
 ## Map of Trips to Aunt Zerviah
 ```{r}
-library(sf)
+"library(sf)
 library(tidygeocoder)
 library(USAboundaries)
 library(tidyverse)
 library(leaflet)
 library(paletteer)
 
-zlocations <- read.csv("z_locations.csv")
-zmovements <- read.csv("z_movements.csv")
+zlocations <- read.csv(z_locations.csv)
+zmovements <- read.csv(z_movements.csv)
 
 zlocations_sf <- st_as_sf(zlocations,
-                         coords = c("lng", "lat"),
+                         coords = c(lng, lat),
                          crs = 4326)
 zmovements_wide <- zmovements |> 
   arrange(date) |> 
   group_by(person) |>
   ungroup() |>
   filter(!is.na(start)) |>
-    rowid_to_column("journeyid")
+    rowid_to_column(journeyid)
 
 zmovements_long <- zmovements_wide |> 
   pivot_longer(
     cols = start:destination,
-    names_to = "type",
-    values_to = "location"
+    names_to = type,
+    values_to = location
   )
 
 zmovements_long_sf <- zmovements_long |> 
-  left_join(zlocations, by = "location") |> 
-  st_as_sf(coords = c("lng", "lat"), crs = 4326) |> 
+  left_join(zlocations, by = location) |> 
+  st_as_sf(coords = c(lng, lat), crs = 4326) |> 
   group_by(journey_id) |> 
   summarise(do_union = FALSE) |> 
-  st_cast("LINESTRING")
+  st_cast(LINESTRING)
 
-journeys_sf <- left_join(zmovements_long_sf, zmovements_wide, by = "journey_id")
+journeys_sf <- left_join(zmovements_long_sf, zmovements_wide, by = journey_id)
 journeys_sf
 
 journeys_sf <- journeys_sf |> 
   mutate(label = paste (
-    person, "<br/>",
-    start, "to", destination, "<br>",
+    person, <br/>,
+    start, to, destination, <br>,
     year(date),day(date), month(date, label = TRUE)))
 
 pal <- colorFactor(
-  palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
+  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),
   domain = journeys_sf$person)
 
 leaflet() |> 
@@ -65,7 +65,7 @@ leaflet() |>
                    fillOpacity = 0.5,
                    radius = 5,
                    label = ~location) |> 
-  addLegend("bottomleft", pal = pal, values = journeys_sf$person)
+  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"
 
 ```
 
