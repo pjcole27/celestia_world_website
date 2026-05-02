@@ -7,7 +7,6 @@ title: Mapping Trips to Aunt Zerviah's
 **Celestia Webster's Diary - November 13, 1867**
 
 ## Map of Trips to Aunt Zerviah
-
 ```{r}
 library(sf)
 library(tidygeocoder)
@@ -47,9 +46,10 @@ journeys_sf <- left_join(zmovements_long_sf, zmovements_wide, by = "journey_id")
 journeys_sf
 
 journeys_sf <- journeys_sf |> 
-  mutate(label = paste,
+  mutate(label = paste (
     person, "<br/>",
-    start, "to", destination, "<br>")
+    start, "to", destination, "<br>",
+    year(date),day(date), month(date, label = TRUE)))
 
 pal <- colorFactor(
   palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
@@ -69,4 +69,5 @@ leaflet() |>
 
 ```
 
+  
   
