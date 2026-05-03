@@ -44,7 +44,8 @@ ggplot() +
   coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"
 ```
 
-## C's Network 
+## C's Network
+
 ```{r}
 library(tidyverse)
 library(sf)
@@ -67,4 +68,3 @@ leaflet() |>
                    fillOpacity = 0.5,
                    radius = 3)
 ```
-

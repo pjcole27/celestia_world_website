@@ -6,6 +6,34 @@ title: Mapping Trips to Aunt Zerviah's
 
 **Celestia Webster's Diary - November 13, 1867**
 
+Map of Trips to Aunt Z just points
+```{r}
+"library(tidyverse)
+library(sf)
+library(leaflet)
+library(paletteer)
+
+zlocations <- read_csv(z_locations)
+
+zlocations_sf <- st_as_sf(zlocations,
+                         coords = c(lng, lat),
+                         crs = 4326)
+pal <- colorFactor(
+  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),
+  domain = zlocations_sf$location)
+                 leaflet() |> 
+
+leaflet() |> 
+  addTiles() |>
+  addCircleMarkers(data = zlocations_sf,
+                   fillOpacity = 0.5,
+                   radius = 3) |>
+  addLegend(bottomleft, pal = pal, values = zlocations_sf$location)"
+```
+
+
+
+
 ## Map of Trips to Aunt Zerviah - One line for each individual
 
 ```{r}
@@ -59,16 +87,17 @@ leaflet() |>
 ```
 
 ## Map of Trips to Aunt Zerviah - One line for each individual
+
 ```{r}
-"library(sf)
+library(sf)
 library(tidygeocoder)
 library(USAboundaries)
 library(tidyverse)
 library(leaflet)
 library(paletteer)
 
-zlocations <- read.csv(z_locations.csv)
-zmovements <- read.csv(z_movements.csv)
+zlocations <- read.csv("z_locations.csv")
+zmovements <- read.csv("z_movements.csv")
 
 zlocations_sf <- st_as_sf(zlocations,
                          coords = c(lng, lat),
@@ -117,9 +146,6 @@ leaflet() |>
                    fillOpacity = 0.5,
                    radius = 5,
                    label = ~location) |> 
-  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"
+  addLegend(bottomleft, pal = pal, values = journeys_sf$person)
 
 ```
-
-
-  
