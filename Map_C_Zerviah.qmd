@@ -146,4 +146,5 @@ leaflet() |>
                    label = ~location) |> 
   addLegend(bottomleft, pal = pal, values = journeys_sf$person)"
 
+
 ```
