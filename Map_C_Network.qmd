@@ -9,38 +9,62 @@ title: Mapping Celestia's Network
 ## C's Network
 
 ```{r}
-library(sf)
+"library(sf)
 library(tidygeocoder)
 library(USAboundaries)
 library(tidyverse)
 
-cnetwork <- read.csv("C_Network.csv")
+cnetwork <- read.csv(C_Network.csv)
 
-locations <- geo(c("Conesus", "Livonia", "Springwater", "Hemlock"))
+locations <- geo(c(Conesus, Livonia, Springwater, Hemlock))
 locations
 
-locations_sf <- st_as_sf(cnetwork, coords = c("lng", "lat"), crs = 4326)
+locations_sf <- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)
 locations_sf
 
-newyork <- us_counties(states = "New York")
+newyork <- us_counties(states = New York)
 
 # Find EPSG code for New York
-state_plane(state = "NY")
+state_plane(state = NY)
 
 # Project
-locs_proj <- st_transform(locations_sf, "EPSG:32146")
-newyork_proj <- st_transform(newyork, "EPSG:32116")
+locs_proj <- st_transform(locations_sf, EPSG:32146)
+newyork_proj <- st_transform(newyork, EPSG:32116)
 
 ggplot() + 
   geom_sf(data = newyork_proj) + 
   geom_sf(data = locs_proj) + 
-  labs(title = "Celestia's Network in Livingston County")
+  labs(title = Celestia's Network in Livingston County)
   theme_minimal()
-
-"ggplot() + 
+location <- networklocations
+                   filter (column_ == diary location) - this is for point map
+ggplot() + 
   geom_sf(data = newyork_proj) + 
   geom_sf(data = locs_proj) +
   coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"
 ```
 
+## C's Network 
+```{r}
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(paletteer)
+
+networklocations <- read_csv("C_Network.csv")
+
+locations_sf <- st_as_sf(networklocations,
+                         coords = c("lng", "lat"),
+                         crs = 4326)
+pal <- colorFactor(
+  palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
+  domain = locations_sf$diarylocation)
+                 leaflet() |> 
+
+leaflet() |> 
+  addTiles() |>
+  addCircleMarkers(data = locations_sf,
+                   fillOpacity = 0.5,
+                   radius = 3)
+```
 
