@@ -36,6 +36,11 @@ ggplot() +
   geom_sf(data = locs_proj) + 
   labs(title = "Celestia's Network in Livingston County")
   theme_minimal()
+
+"ggplot() + 
+  geom_sf(data = newyork_proj) + 
+  geom_sf(data = locs_proj) +
+  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"
 ```
 
-Need to zoom into livingston county
+
