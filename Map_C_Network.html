@@ -142,8 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cs-network" id="toc-cs-network" class="nav-link active" data-scroll-target="#cs-network">C’s Network</a></li>
-  <li><a href="#cs-network-1" id="toc-cs-network-1" class="nav-link" data-scroll-target="#cs-network-1">C’s Network</a></li>
+  <li><a href="#celestias-network-in-livinston-county" id="toc-celestias-network-in-livinston-county" class="nav-link active" data-scroll-target="#celestias-network-in-livinston-county">Celestia’s Network in Livinston County</a></li>
   </ul>
 </nav>
     </div>
@@ -171,16 +170,8 @@ ul.task-list li input[type="checkbox"] {
 
 <p><em>“The Lord has been and is very kind to me in giving me so many friends may I ever be grateful for all his benefits.”</em></p>
 <p><strong>Celestia Webster’s Diary - May 17, 1867</strong></p>
-<section id="cs-network" class="level2">
-<h2 class="anchored" data-anchor-id="cs-network">C’s Network</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "library(sf)\nlibrary(tidygeocoder)\nlibrary(USAboundaries)\nlibrary(tidyverse)\n\ncnetwork &lt;- read.csv(C_Network.csv)\n\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\nlocations\n\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\nlocations_sf\n\nnewyork &lt;- us_counties(states = New York)\n\n# Find EPSG code for New York\nstate_plane(state = NY)\n\n# Project\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\n\nggplot() + \n  geom_sf(data = newyork_proj) + \n  geom_sf(data = locs_proj) + \n  labs(title = Celestia's Network in Livingston County)\n  theme_minimal()\nlocation &lt;- networklocations\n                   filter (column_ == diary location) - this is for point map\nggplot() + \n  geom_sf(data = newyork_proj) + \n  geom_sf(data = locs_proj) +\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"</code></pre>
-</div>
-</div>
-</section>
-<section id="cs-network-1" class="level2">
-<h2 class="anchored" data-anchor-id="cs-network-1">C’s Network</h2>
+<section id="celestias-network-in-livinston-county" class="level2">
+<h2 class="anchored" data-anchor-id="celestias-network-in-livinston-county">Celestia’s Network in Livinston County</h2>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -208,8 +199,13 @@ dbl (3): lat, lng, zip
 <pre><code>Warning: Unknown or uninitialised column: `diarylocation`.</code></pre>
 </div>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-ef28b34ab1458f5f71a0" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-ef28b34ab1458f5f71a0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[42.73459328,42.72679843,42.77223065,42.79223614,42.72963835,42.713073,42.66798902,42.68993571,42.70184884,42.72365779,42.79163317,42.803622,42.71570964],[-77.62621363,-77.63462583,-77.64536416,-77.60634494999999,-77.66359343000001,-77.674997,-77.63505603,-77.62209364,-77.66914288,-77.63345184000001,-77.62484193,-77.611285,-77.67503247],3,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.5},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.66798902,42.803622],"lng":[-77.67503247,-77.60634494999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-1bdc318af0e9fccbc08e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-1bdc318af0e9fccbc08e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[42.73459328,42.72679843,42.77223065,42.79223614,42.72963835,42.713073,42.66798902,42.68993571,42.70184884,42.72365779,42.79163317,42.803622,42.71570964],[-77.62621363,-77.63462583,-77.64536416,-77.60634494999999,-77.66359343000001,-77.674997,-77.63505603,-77.62209364,-77.66914288,-77.63345184000001,-77.62484193,-77.611285,-77.67503247],3,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.5},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.66798902,42.803622],"lng":[-77.67503247,-77.60634494999999]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "library(sf)\nlibrary(tidygeocoder)\nlibrary(USAboundaries)\nlibrary(tidyverse)\n\ncnetwork &lt;- read.csv(C_Network.csv)\n\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\nlocations\n\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\nlocations_sf\n\nnewyork &lt;- us_counties(states = New York)\n\n# Find EPSG code for New York\nstate_plane(state = NY)\n\n# Project\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\n\nggplot() + \n  geom_sf(data = newyork_proj) + \n  geom_sf(data = locs_proj) + \n  labs(title = Celestia's Network in Livingston County)\n  theme_minimal()\nlocation &lt;- networklocations\n                   filter (column_ == diary location) - this is for point map\nggplot() + \n  geom_sf(data = newyork_proj) + \n  geom_sf(data = locs_proj) +\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"</code></pre>
 </div>
 </div>
 
