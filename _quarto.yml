@@ -2,8 +2,7 @@ project:
   type: website
 
 execute:
-  echo: false
-  freeze: false
+  freeze: auto
 
 website:
   title: "Celestia's World"
