@@ -94,8 +94,8 @@ library(tidyverse)
 library(leaflet)
 library(paletteer)
 
-zlocations <- read.csv("z_locations.csv")
-zmovements <- read.csv("z_movements.csv")
+zlocations <- read.csv(z_locations.csv)
+zmovements <- read.csv(z_movements.csv)
 
 zlocations_sf <- st_as_sf(zlocations,
                          coords = c(lng, lat),
@@ -145,6 +145,4 @@ leaflet() |>
                    radius = 5,
                    label = ~location) |> 
   addLegend(bottomleft, pal = pal, values = journeys_sf$person)"
-
-
 ```
