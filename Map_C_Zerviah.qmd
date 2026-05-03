@@ -7,6 +7,7 @@ title: Mapping Trips to Aunt Zerviah's
 **Celestia Webster's Diary - November 13, 1867**
 
 Map of Trips to Aunt Z just points
+
 ```{r}
 "library(tidyverse)
 library(sf)
@@ -30,9 +31,6 @@ leaflet() |>
                    radius = 3) |>
   addLegend(bottomleft, pal = pal, values = zlocations_sf$location)"
 ```
-
-
-
 
 ## Map of Trips to Aunt Zerviah - One line for each individual
 
@@ -89,7 +87,7 @@ leaflet() |>
 ## Map of Trips to Aunt Zerviah - One line for each individual
 
 ```{r}
-library(sf)
+"library(sf)
 library(tidygeocoder)
 library(USAboundaries)
 library(tidyverse)
@@ -146,6 +144,6 @@ leaflet() |>
                    fillOpacity = 0.5,
                    radius = 5,
                    label = ~location) |> 
-  addLegend(bottomleft, pal = pal, values = journeys_sf$person)
+  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"
 
 ```
