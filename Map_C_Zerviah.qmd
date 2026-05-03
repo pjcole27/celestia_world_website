@@ -7,6 +7,58 @@ title: Mapping Trips to Aunt Zerviah's
 **Celestia Webster's Diary - November 13, 1867**
 
 ## Map of Trips to Aunt Zerviah
+
+```{r}
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(paletteer)
+
+## read data
+
+zmovements <-read_csv("z_movements.csv")
+zlocations <-read_csv("z_locations.csv")
+
+#sf object
+
+zlocations_sf <- st_as_sf(zlocations,
+                         coords = c("lng", "lat"),
+                         crs = 4326)
+#joining geocoded data to attribute data and then turning it into an sf object
+
+zmovements_geo <- left_join(zmovements, zlocations,
+                           by = join_by(destination == location))
+zmovements_sf <- st_as_sf(zmovements_geo,
+                         coords = c("lng", "lat"),
+                         crs = 4326)
+#using the group by and summarize workflow 
+zmovements_lines <- zmovements_sf |> 
+  arrange(date) |>
+  group_by(person) |>
+  summarise(do_union = FALSE) |>
+  st_cast("LINESTRING")
+
+#leaflet map
+pal <- colorFactor(
+  palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
+    domain = zmovements_lines$person)
+
+leaflet() |> 
+  addTiles() |>
+  addPolylines(data = zmovements_lines,
+               color = ~pal(person),
+               opacity = 0.8,
+               label = ~person) |> 
+  addCircleMarkers(data = zlocations_sf,
+                   fillOpacity = 0.5,
+                   radius = 5,
+                   label = ~location) |> 
+  addLegend("bottomleft", pal = pal, values = zmovements_lines$person)
+
+
+```
+
+## Map of Trips to Aunt Zerviah - One line for each individual
 ```{r}
 "library(sf)
 library(tidygeocoder)
@@ -69,5 +121,5 @@ leaflet() |>
 
 ```
 
-  
+
   
