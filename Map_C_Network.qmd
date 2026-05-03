@@ -1,5 +1,7 @@
 ---
 title: Mapping Celestia's Network
+execute:
+  echo: false
 ---
 
 *"The Lord has been and is very kind to me in giving me so many friends may I ever be grateful for all his benefits."*

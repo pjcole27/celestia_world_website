@@ -1,5 +1,7 @@
 ---
 title: Sickness and Medicine in Celestia's World
+execute:
+  echo: false
 ---
 
 *"How wise and good in God to grant us friends, he has bound us together by the ties of blood that can never be sundered We should be ever trying to do each other good to help each other on in our journey to the kingdom"*
