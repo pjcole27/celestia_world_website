@@ -2,6 +2,7 @@ project:
   type: website
 
 execute:
+  echo: false
   freeze: auto
 
 website:
