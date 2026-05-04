@@ -1,7 +1,11 @@
 ---
+
+---
+
+---
 title: Celestia's World
 execute:
-  echo: false
+echo: false
 ---
 
 *"My throat troubles me considerable this winter. I begin to be afraid that it is going to be something serious. It hurts me to talk after talking so much in school, I have been very quiet."*

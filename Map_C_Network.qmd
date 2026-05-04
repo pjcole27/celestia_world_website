@@ -10,6 +10,10 @@ execute:
 
 ## Celestia's Network in Livinston County
 
+![1850 Map of Livingston County, New York](1850map.jpg){alt="1850 Map of Livingston County, New York" fig-alt="This is a 1850 map of Livingston County, New York." fig-align="center" width="502"}
+
+[![1858 Survey Map of Livingston County](gileslivingston.jpg){fig-alt="This is a survey map of Livingston County, New York with details on county boundaries, pop outs of important cities, and directory information" fig-align="center" width="678"}](https://www.loc.gov/resource/g3803l.la000515/?r=-0.21,-0.138,1.279,0.681,0)
+
 ```{r}
 library(tidyverse)
 library(sf)
