@@ -8,12 +8,7 @@ execute:
 
 **Celestia Webster's Diary - May 17, 1867**
 
-
-
-
-
-
-## Celestia's Network in Livinston County 
+## Celestia's Network in Livinston County
 
 ```{r}
 library(tidyverse)
@@ -26,18 +21,21 @@ networklocations <- read_csv("C_Network.csv")
 locations_sf <- st_as_sf(networklocations,
                          coords = c("lng", "lat"),
                          crs = 4326)
+location <- networklocations |>
+  select(`diary location`)
+                   
 pal <- colorFactor(
   palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
-  domain = locations_sf$diarylocation)
-                 leaflet() |> 
+  domain = location$`diary location`)
 
 leaflet() |> 
   addTiles() |>
   addCircleMarkers(data = locations_sf,
                    fillOpacity = 0.5,
-                   radius = 3)
+                   radius = 3,
+                   label = ~location) |>
+  addLegend("bottomleft", pal = pal, values = location$`diary location`)
 ```
-
 
 ```{r}
 "library(sf)
@@ -74,4 +72,3 @@ ggplot() +
   geom_sf(data = locs_proj) +
   coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))"
 ```
-
