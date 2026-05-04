@@ -21,20 +21,16 @@ networklocations <- read_csv("C_Network.csv")
 locations_sf <- st_as_sf(networklocations,
                          coords = c("lng", "lat"),
                          crs = 4326)
-location <- networklocations |>
-  select(`diary location`)
-                   
 pal <- colorFactor(
   palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
-  domain = location$`diary location`)
+  domain = locations_sf$'diary location')
 
 leaflet() |> 
   addTiles() |>
   addCircleMarkers(data = locations_sf,
                    fillOpacity = 0.5,
-                   radius = 3,
-                   label = ~location) |>
-  addLegend("bottomleft", pal = pal, values = location$`diary location`)
+                   radius = 3)
+  
 ```
 
 ```{r}
