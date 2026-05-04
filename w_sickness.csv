@@ -1,75 +1,66 @@
-month,date,name,sickness,quote
-January,,,,
-February,,,,
-March,,,,
-April,1866-04-04,"Wealthy ""Wet"" Webster",headache," 
- 	
-a few minutes before a blur came before her eyes and she could scarcely see; soon her head began to ache and she suffered much with sick headache during the day."
-May,,,,
-June,,,,
-July,1866-01-07,"Wealthy ""Wet"" Webster",Erysipelas ,"called at Dr. Greys to have him see Wet’s foot, he said it was erysipelas that ailed"
-July,1866-02-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Wet has been doctoring her foot faithfully today; it has changed color, but I do not know whether it is better or not"
-July,1866-03-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Wet has been miserable today. has attended to her foot faithfully. Says she could not have taught had she have gone back."
-July,1866-03-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Sue, hardly wanted to come home but on hearing that Wet had the erysipelas in her foot she decided "
-July,1866-05-07,"Wealthy ""Wet"" Webster",Erysipelas ,her foot does not swell much but it is dark and looks bad
-July,1866-22-07,"Wealthy ""Wet"" Webster",cough,Wet’s foot was better but her cough was worse and she hardly knew what to do about going back to her school.
-July,1866-31-07,"Wealthy ""Wet"" Webster",lungs,"Wet was very bad off; her lungs are so bad, she had a very bad day a couple of days ago"
-August,1866-03-08,"Wealthy ""Wet"" Webster",lungs,Arrived home a little after dark found Wet feeling badly 
-August,1866-04-08,"Wealthy ""Wet"" Webster",lungs,Wet has felt worse this afternoon than she did in the morning
-August,1866-05-08,"Wealthy ""Wet"" Webster",lungs,"Wealthy is no better, to me it seems if she does not get speedy relief she will not live a great while"
-August,1866-07-08,"Wealthy ""Wet"" Webster",lungs,Wet is not as well as when I was at home and was beginning to get discouraged
-August,1866-11-08,"Wealthy ""Wet"" Webster",lungs,Wet was pretty bad off. 
-August,1866-18-08,"Wealthy ""Wet"" Webster","coughing, stomachache"," I do not think she is any better than she was when I was at home before if she is as well. Her stomach cramps, thus troubling her a great deal and she coughs a great deal."
-August,1866-19-08,"Wealthy ""Wet"" Webster",stomachache,Wealthy had a very poor time last night was awake nearly all night. her stomach troubled her badly
-August,1866-20-08,"Wealthy ""Wet"" Webster",stomachache," Wet, was not feeling much better"
-August,1866-31-08,"Wealthy ""Wet"" Webster",stomachache,"Found Wet, much weaker than we were at home before."
-September,1866-01-09,"Wealthy ""Wet"" Webster",fever,She was burning up with a fever we did not sleep very well.
-September,1866-02-09,"Wealthy ""Wet"" Webster",fever,Wet is completely exhausted tonight and says she hopes she will never be so tired again
-September,1866-03-09,"Wealthy ""Wet"" Webster",fever,We had a jug of hot water put at her feet to see if we go could not get her into a sweat..she did not get to sleep during the night was so sick with her stomach. she commenced vomiting then there was no rest for her more that night.
-September,1866-06-09,"Wealthy ""Wet"" Webster",lungs,Dr. was at our house Tuesday he said he thought Wet’s symptoms were more favorable. her appetite was nothing
-September,1866-08-09,"Wealthy ""Wet"" Webster",lungs,found her pretty bad.Found Wet pretty bad. Angie brought her some peaches and she appeared much pleased with them Mrs. Straub sent her some plums and a tomato She said she was much obliged for them
-September,1866-13-09,"Wealthy ""Wet"" Webster",feeling better,Wet was some better O how I do hope that she will soon get well.
-September,1866-16-09,"Wealthy ""Wet"" Webster",fatigued,Wet was having a bad time. I do not think she appeared any better than when we were at home a week ago. Wet was completely tired out again tonight
-September,1866-17-09,"Wealthy ""Wet"" Webster",stomachache,Wet has had a poor day again; her stomach troubling her
-September,1866-18-09,"Wealthy ""Wet"" Webster",stomachache,"she had a bad time with her stomach. she does not rest much nights, sleeps none during the day, that makes her grow weak very fast."
-September,1866-19-09,"Wealthy ""Wet"" Webster",stomachache,Her stomach troubles her a great deal I wonder what it will amount to
+month,date,name,sickness,quote,time
+April,1866-04-04,"Wealthy ""Wet"" Webster",headache,"called at Dr. Greys to have him see Wet’s foot, he said it was erysipelas that ailed",1
+July,1866-01-07,"Wealthy ""Wet"" Webster",Erysipelas ,"called at Dr. Greys to have him see Wet’s foot, he said it was erysipelas that ailed",2
+July,1866-02-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Wet has been doctoring her foot faithfully today; it has changed color, but I do not know whether it is better or not",3
+July,1866-03-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Wet has been miserable today. has attended to her foot faithfully. Says she could not have taught had she have gone back.",4
+July,1866-03-07,"Wealthy ""Wet"" Webster",Erysipelas ,"Sue, hardly wanted to come home but on hearing that Wet had the erysipelas in her foot she decided ",5
+July,1866-05-07,"Wealthy ""Wet"" Webster",Erysipelas ,her foot does not swell much but it is dark and looks bad,6
+July,1866-22-07,"Wealthy ""Wet"" Webster",cough,Wet’s foot was better but her cough was worse and she hardly knew what to do about going back to her school.,7
+July,1866-31-07,"Wealthy ""Wet"" Webster",lungs,"Wet was very bad off; her lungs are so bad, she had a very bad day a couple of days ago",8
+August,1866-03-08,"Wealthy ""Wet"" Webster",lungs,Arrived home a little after dark found Wet feeling badly ,9
+August,1866-04-08,"Wealthy ""Wet"" Webster",lungs,Wet has felt worse this afternoon than she did in the morning,10
+August,1866-05-08,"Wealthy ""Wet"" Webster",lungs,"Wealthy is no better, to me it seems if she does not get speedy relief she will not live a great while",11
+August,1866-07-08,"Wealthy ""Wet"" Webster",lungs,Wet is not as well as when I was at home and was beginning to get discouraged,12
+August,1866-11-08,"Wealthy ""Wet"" Webster",lungs,Wet was pretty bad off. ,13
+August,1866-18-08,"Wealthy ""Wet"" Webster","coughing, stomachache"," I do not think she is any better than she was when I was at home before if she is as well. Her stomach cramps, thus troubling her a great deal and she coughs a great deal.",14
+August,1866-19-08,"Wealthy ""Wet"" Webster",stomachache,Wealthy had a very poor time last night was awake nearly all night. her stomach troubled her badly,15
+August,1866-20-08,"Wealthy ""Wet"" Webster",stomachache," Wet, was not feeling much better",16
+August,1866-31-08,"Wealthy ""Wet"" Webster",stomachache,"Found Wet, much weaker than we were at home before.",17
+September,1866-01-09,"Wealthy ""Wet"" Webster",fever,She was burning up with a fever we did not sleep very well.,18
+September,1866-02-09,"Wealthy ""Wet"" Webster",fever,Wet is completely exhausted tonight and says she hopes she will never be so tired again,19
+September,1866-03-09,"Wealthy ""Wet"" Webster",fever,We had a jug of hot water put at her feet to see if we go could not get her into a sweat..she did not get to sleep during the night was so sick with her stomach. she commenced vomiting then there was no rest for her more that night.,20
+September,1866-06-09,"Wealthy ""Wet"" Webster",lungs,Dr. was at our house Tuesday he said he thought Wet’s symptoms were more favorable. her appetite was nothing,21
+September,1866-08-09,"Wealthy ""Wet"" Webster",lungs,found her pretty bad.Found Wet pretty bad. Angie brought her some peaches and she appeared much pleased with them Mrs. Straub sent her some plums and a tomato She said she was much obliged for them,22
+September,1866-13-09,"Wealthy ""Wet"" Webster",feeling better,Wet was some better O how I do hope that she will soon get well.,23
+September,1866-16-09,"Wealthy ""Wet"" Webster",fatigued,Wet was having a bad time. I do not think she appeared any better than when we were at home a week ago. Wet was completely tired out again tonight,24
+September,1866-17-09,"Wealthy ""Wet"" Webster",stomachache,Wet has had a poor day again; her stomach troubling her,25
+September,1866-18-09,"Wealthy ""Wet"" Webster",stomachache,"she had a bad time with her stomach. she does not rest much nights, sleeps none during the day, that makes her grow weak very fast.",26
+September,1866-19-09,"Wealthy ""Wet"" Webster",stomachache,Her stomach troubles her a great deal I wonder what it will amount to,27
 September,1866-20-09,"Wealthy ""Wet"" Webster",stomachache," Wealthy has had a miserable day of it her stomach is so bad and it tires her completely out to vomit.  The doctor came today said he thought her symptoms were better except her stomach
-"
-September,1866-21-09,"Wealthy ""Wet"" Webster",stomachache,Found Wet better in regard to her stomach but her head commenced to ache and she suffered extremely during the night
-September,1866-22-09,"Wealthy ""Wet"" Webster",stomachache,"Wet passed a miserable night again. She had a severe headache in the morning and it lasted her all day. Wet sat up some during the day, though not much, for it tired her very much indeed, she sat a little while in Sue’s lap. She is growing poor very fast"
+",28
+September,1866-21-09,"Wealthy ""Wet"" Webster",stomachache,Found Wet better in regard to her stomach but her head commenced to ache and she suffered extremely during the night,29
+September,1866-22-09,"Wealthy ""Wet"" Webster",stomachache,"Wet passed a miserable night again. She had a severe headache in the morning and it lasted her all day. Wet sat up some during the day, though not much, for it tired her very much indeed, she sat a little while in Sue’s lap. She is growing poor very fast",30
 September,1866-23-09,"Wealthy ""Wet"" Webster",headache,"a terrible headache; she said it seemed to her that her head would split open, she could not help moaning all the time. 
-after receiving the medicine her head grew some easier In a short time she vomited; her breakfast came up, she said it tasted about as good when it came up as when she ate it She has vomited several times during the day"
-September,1866-24-09,"Wealthy ""Wet"" Webster",vomitting,I arose she commenced vomiting and nearly all day she could keep nothing in her stomach that she ate or drank nor even her medicine down... He thought it very singular that her stomach had been so bad. He changed her medicine.
+after receiving the medicine her head grew some easier In a short time she vomited; her breakfast came up, she said it tasted about as good when it came up as when she ate it She has vomited several times during the day",31
+September,1866-24-09,"Wealthy ""Wet"" Webster",vomitting,I arose she commenced vomiting and nearly all day she could keep nothing in her stomach that she ate or drank nor even her medicine down... He thought it very singular that her stomach had been so bad. He changed her medicine.,32
 September,1866-25-09,"Wealthy ""Wet"" Webster","headache, earache","she was taken with difficulty of breathing could scarcely get her breath for between two and three hours There was a strange feeling in her stomach
-Doctor said the disease had gone to her heart partially and that caused the bad spell she had had"
-September,1866-26-09,"Wealthy ""Wet"" Webster",lungs,She slept some the last part of the night. She is not put to it so much for breath this morning as in the first of last night. Wet’s breath was so short that praying vocally exhausted her so that it was some time before she got rested She had another of those faint bad spells
+Doctor said the disease had gone to her heart partially and that caused the bad spell she had had",33
+September,1866-26-09,"Wealthy ""Wet"" Webster",lungs,She slept some the last part of the night. She is not put to it so much for breath this morning as in the first of last night. Wet’s breath was so short that praying vocally exhausted her so that it was some time before she got rested She had another of those faint bad spells,34
 September,1866-27-09,"Wealthy ""Wet"" Webster",lungs,"The disease as the night before went to her heart and for hours she could hardly get her breath.
-This forenoon she had several bad spells sick at her stomach, headache, her bowels troubling her and her heart."
-September,1866-28-09,"Wealthy ""Wet"" Webster","lungs, fainting",Wealthy had another fainting spell commencing about the same time in the day they did both days before The doctor came before she got over it; he stayed the night with her.
+This forenoon she had several bad spells sick at her stomach, headache, her bowels troubling her and her heart.",35
+September,1866-28-09,"Wealthy ""Wet"" Webster","lungs, fainting",Wealthy had another fainting spell commencing about the same time in the day they did both days before The doctor came before she got over it; he stayed the night with her.,36
 September,1866-29-09,"Wealthy ""Wet"" Webster",lungs,"Today she has been very quiet, has not appeared to suffer such extreme pain nor has she complained of such singular feelings as yesterday She said while I was sitting by her bedside that she wanted to talk but she could not it tired her so.
-Dr said her symptoms were better"
-September,1866-30-09,"Wealthy ""Wet"" Webster",fatigued,"she was completely exhausted, she said tired was no name for the way she felt "
-October,1866-01-10,"Wealthy ""Wet"" Webster",vomitting,she vomited up her supper that caused her to be very restless.  her bowels were going to move. She on getting up became very faint. her heart was in a complete flutter; she could scarcely get her breathe
+Dr said her symptoms were better",37
+September,1866-30-09,"Wealthy ""Wet"" Webster",fatigued,"she was completely exhausted, she said tired was no name for the way she felt ",38
+October,1866-01-10,"Wealthy ""Wet"" Webster",vomitting,she vomited up her supper that caused her to be very restless.  her bowels were going to move. She on getting up became very faint. her heart was in a complete flutter; she could scarcely get her breathe,39
 October,1866-02-10,"Wealthy ""Wet"" Webster",lungs,"She lay in a kind of stupor part of the time It troubles her much to talk, she only speaks in a whisper.
-Wet asked the doctor if he thought she would get well. He told her that her chances were small"
-October,1866-03-10,"Wealthy ""Wet"" Webster","stomachache, lungs",In the afternoon her stomach and lungs commenced paining her. She had a severe time at length
-October,1866-04-10,"Wealthy ""Wet"" Webster",lungs,The smart weed appeared to ease the pain somewhat. Her countenance looks decidedly worse today and she has been suffering acute pain at times
-October,1866-05-10,"Wealthy ""Wet"" Webster",stomachache,she had stomach-gripping pains through her stomach and bowels
-October,1866-06-10,"Wealthy ""Wet"" Webster",vomitting,she has vomited considerable today a great deal of billious matter. Wet vomited four times during the night and her bowels moved several times.
-October,1866-07-10,"Wealthy ""Wet"" Webster",lungs,"Sister Wealthy is very sick she says “I am so sick so tired”...The Dr. came after dark, left her a different kind of powders "
-October,1866-08-10,"Wealthy ""Wet"" Webster",lungs,"Wet had a bad night of it , had three sinking spells, they (the ones who sat up) began to be afraid she would not live the night through. "
-October,1866-09-10,"Wealthy ""Wet"" Webster",stomacheache,"Wealthy has the appearance of running down all the time, her stomach and bowels in the forenoon pained her much."
-October,1866-10-10,"Wealthy ""Wet"" Webster",vomitting,she was vomiting from ten o’clock till four
-October,1866-11-10,"Wealthy ""Wet"" Webster",death," Angie said that she choked up so before twelve o’clock that she was almost afraid she was dying...Sister suffered much, her breath grew shorter and shorter.Sue came down and said she did not believe but that Wet was dying.She said she was resigned to the will of God and would often exclaim amidst her suffering “Bless the Lord Bless the Lord” She said tell Lout if ever you see him I want him to serve Jesus for I want to meet him again. At half past six o’clock she breathed her last. Her last words were “Lord Jesus receive my spirit” She di don’t appear to suffer as much when dying as she had at other times."
-October,1866-12-10,"Wealthy ""Wet"" Webster",death,"After performing the last offices of kindness that we could for sister Wealthy, which was dressing her for the tomb, laying her away in the parlor which appears to be a reception room for the dead We all retired to see if we could rest our wearied bodies we hardly expected to sleep. Arose this morning with such a feeling of loneliness that I can not describe."
-October,1866-13-10,"Wealthy ""Wet"" Webster",death,"It has been pleasant, but oh what a lonely day. Friends have called to look on the form of sister who is now cold in death and to offer some of them their services. and to sympathize with us in our affliction. The day has passed away amidst scenes of sadness and we know that on the morrow if the Lord will the remains of Wet, our darling sister will be consigned to the cold and silent tomb. What a solemn thought thither we all are tending. Death is certain and life uncertain "
-October,1866-14-10,"Wealthy ""Wet"" Webster",funeral,"Aunt Polly, Mrs. Thompson, and Olive were here to breakfast beside those usually here. I helped about making the beds and doing the breakfast work, then dressed myself for the funeral. Then we girls went and laid our beloved sister in the coffin, the last office that we could render her. I cannot express my feelings as I was helping place her in the coffin and knew that in a very short time I must take the last look of my dearly loved sister Wet There was a large company assembled here. No minister came, but Br. Allen and he was so much affected that he only read the fifth chapter of Romans and made a prayer. Then the congregation took the last look of the corpse, and then how sad the thought we gathered around the coffin, and gazed for the last time on the cold, inanimate form of our loved one, who was sleeping in the sleep of death, but who we have reason to believe"
-October,1866-19-10,"Wealthy ""Wet"" Webster",death,"My mind is not so engaged, but I often find myself thinking of my much loved sister, Wealthy who has been sleeping over a week the sleep of death."
-October,1866-20-10,"Wealthy ""Wet"" Webster",death,"I find it has been to me a sad, sad time. How I loved the dear sister, that one week ago lay a corpse in the house dressed for the tomb. Then we could gaze on her, and she lay cold in death and see our loved one thus but now that privilege is denied us, and as I sit here writing in the room where she died oh, how sad I feel"
-October,1866-21-10,"Wealthy ""Wet"" Webster",death,"After they started, I wrote in my diary, read some in my bible, spend some time talking with the family and a great deal in thinking of sister Wet. I was for some time alone in the room where she died, and not help thinking how much she suffered the few last weeks of her life, when I was at home with her, "
-October,1866-25-10,"Wealthy ""Wet"" Webster",death,"We Angie, and I both very tired and glad to lay our weary limbs to rest. Then we spent some time in meditation. Oh, how heartrending to have the dearest ties of earth so sundered by Death’s cruel hand."
-October,1866-26-10,"Wealthy ""Wet"" Webster",death,"I have thought so often of Wet and could not help wishing she were here with us, but perhaps that is wrong. Oh, that I felt right, and that what is wrong I may be kept from doing"
+Wet asked the doctor if he thought she would get well. He told her that her chances were small",40
+October,1866-03-10,"Wealthy ""Wet"" Webster","stomachache, lungs",In the afternoon her stomach and lungs commenced paining her. She had a severe time at length,41
+October,1866-04-10,"Wealthy ""Wet"" Webster",lungs,The smart weed appeared to ease the pain somewhat. Her countenance looks decidedly worse today and she has been suffering acute pain at times,42
+October,1866-05-10,"Wealthy ""Wet"" Webster",stomachache,she had stomach-gripping pains through her stomach and bowels,43
+October,1866-06-10,"Wealthy ""Wet"" Webster",vomitting,she has vomited considerable today a great deal of billious matter. Wet vomited four times during the night and her bowels moved several times.,44
+October,1866-07-10,"Wealthy ""Wet"" Webster",lungs,"Sister Wealthy is very sick she says “I am so sick so tired”...The Dr. came after dark, left her a different kind of powders ",45
+October,1866-08-10,"Wealthy ""Wet"" Webster",lungs,"Wet had a bad night of it , had three sinking spells, they (the ones who sat up) began to be afraid she would not live the night through. ",46
+October,1866-09-10,"Wealthy ""Wet"" Webster",stomacheache,"Wealthy has the appearance of running down all the time, her stomach and bowels in the forenoon pained her much.",47
+October,1866-10-10,"Wealthy ""Wet"" Webster",vomitting,she was vomiting from ten o’clock till four,48
+October,1866-11-10,"Wealthy ""Wet"" Webster",death," Angie said that she choked up so before twelve o’clock that she was almost afraid she was dying...Sister suffered much, her breath grew shorter and shorter.Sue came down and said she did not believe but that Wet was dying.She said she was resigned to the will of God and would often exclaim amidst her suffering “Bless the Lord Bless the Lord” She said tell Lout if ever you see him I want him to serve Jesus for I want to meet him again. At half past six o’clock she breathed her last. Her last words were “Lord Jesus receive my spirit” She di don’t appear to suffer as much when dying as she had at other times.",49
+October,1866-12-10,"Wealthy ""Wet"" Webster",death,"After performing the last offices of kindness that we could for sister Wealthy, which was dressing her for the tomb, laying her away in the parlor which appears to be a reception room for the dead We all retired to see if we could rest our wearied bodies we hardly expected to sleep. Arose this morning with such a feeling of loneliness that I can not describe.",50
+October,1866-13-10,"Wealthy ""Wet"" Webster",death,"It has been pleasant, but oh what a lonely day. Friends have called to look on the form of sister who is now cold in death and to offer some of them their services. and to sympathize with us in our affliction. The day has passed away amidst scenes of sadness and we know that on the morrow if the Lord will the remains of Wet, our darling sister will be consigned to the cold and silent tomb. What a solemn thought thither we all are tending. Death is certain and life uncertain ",51
+October,1866-14-10,"Wealthy ""Wet"" Webster",funeral,"Aunt Polly, Mrs. Thompson, and Olive were here to breakfast beside those usually here. I helped about making the beds and doing the breakfast work, then dressed myself for the funeral. Then we girls went and laid our beloved sister in the coffin, the last office that we could render her. I cannot express my feelings as I was helping place her in the coffin and knew that in a very short time I must take the last look of my dearly loved sister Wet There was a large company assembled here. No minister came, but Br. Allen and he was so much affected that he only read the fifth chapter of Romans and made a prayer. Then the congregation took the last look of the corpse, and then how sad the thought we gathered around the coffin, and gazed for the last time on the cold, inanimate form of our loved one, who was sleeping in the sleep of death, but who we have reason to believe",52
+October,1866-19-10,"Wealthy ""Wet"" Webster",death,"My mind is not so engaged, but I often find myself thinking of my much loved sister, Wealthy who has been sleeping over a week the sleep of death.",53
+October,1866-20-10,"Wealthy ""Wet"" Webster",death,"I find it has been to me a sad, sad time. How I loved the dear sister, that one week ago lay a corpse in the house dressed for the tomb. Then we could gaze on her, and she lay cold in death and see our loved one thus but now that privilege is denied us, and as I sit here writing in the room where she died oh, how sad I feel",54
+October,1866-21-10,"Wealthy ""Wet"" Webster",death,"After they started, I wrote in my diary, read some in my bible, spend some time talking with the family and a great deal in thinking of sister Wet. I was for some time alone in the room where she died, and not help thinking how much she suffered the few last weeks of her life, when I was at home with her, ",55
+October,1866-25-10,"Wealthy ""Wet"" Webster",death,"We Angie, and I both very tired and glad to lay our weary limbs to rest. Then we spent some time in meditation. Oh, how heartrending to have the dearest ties of earth so sundered by Death’s cruel hand.",56
+October,1866-26-10,"Wealthy ""Wet"" Webster",death,"I have thought so often of Wet and could not help wishing she were here with us, but perhaps that is wrong. Oh, that I felt right, and that what is wrong I may be kept from doing",57
 October,1866-28-10,"Wealthy ""Wet"" Webster",death,"Two weeks ago today was the time we took a farewell look of sister Wet and her corpse was taken from our home, carried and deposited her in the narrow house, prepared for her, where we expect she will remain till the trumpet sounds awaking the dead to life.
-"
-November,,,,
-December,,,,
+",58

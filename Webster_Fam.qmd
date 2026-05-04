@@ -29,16 +29,21 @@ csickness <-subset(csickness, select = -date)
 father <- subset(father, select = -date)
 wsickness <- subset(wsickness, select = -date)
 
-wsickness[wsickness == ""] <- NA
 
 # Combine data frames
 
-familysickness <- rbind(csickness , father, wsickness)
+familysickness <- rbind(csickness, father, wsickness)
 
+# ggplot
 
+familysickness |>
+  ggplot(aes(x = time, y = name, fill = ))+
+  geom_col(fill = 'blue')
+  
 
 ```
 
+make a line graph
 
 
 
