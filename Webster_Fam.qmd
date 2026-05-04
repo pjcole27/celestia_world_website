@@ -19,30 +19,37 @@ execute:
 **Celestia Webster's Diary -October 10, 1866**
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
 
 library(tidyverse)
 
-csickness <- read_csv("c_sickness.csv")
-father <- read_csv("fathers_death.csv")
+csickness <- read_csv("c_sickness.csv",
+                      col_types = cols(
+                        date = col_date(
+                          "%Y-%d-%m"
+                        )
+                      ))
+father <- read_csv("fathers_death.csv", 
+                   col_types = cols(
+                     date = col_date(
+                       "%Y-%d-%m"
+                     )
+                   ))
+            
 wsickness <- read.csv("w_sickness.csv")
-
-csickness <-subset(csickness, select = -date)
-father <- subset(father, select = -date)
-wsickness <- subset(wsickness, select = -date)
-
-
-# Combine data frames
 
 familysickness <- rbind(csickness, father, wsickness)
 
-# ggplot
-
-familysickness |>
+"familysickness |>
   ggplot(aes(x = name, y = time, fill = time))+
-  geom_col(fill = 'blue')
+  geom_col(fill = 'blue')"
   
+ggplot(familysickness) + 
+  geom_point(aes(x = sickness, y = month, colour = name),
+             size = 3) +
+  theme_bw()
 
 ```
 
