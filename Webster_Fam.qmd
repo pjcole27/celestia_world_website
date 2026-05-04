@@ -18,6 +18,39 @@ execute:
 
 **Celestia Webster's Diary -October 10, 1866**
 
-### Sickness in Livingston County
+```{r}
+library(tidyverse)
 
-### Celestia's Health
+csickness <- read_csv("c_sickness.csv")
+father <- read_csv("fathers_death.csv")
+wsickness <- read.csv("w_sickness.csv")
+
+csickness <-subset(csickness, select = -date)
+father <- subset(father, select = -date)
+wsickness <- subset(wsickness, select = -date)
+
+wsickness[wsickness == ""] <- NA
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
