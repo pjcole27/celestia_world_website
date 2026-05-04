@@ -142,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual" id="toc-map-of-trips-to-aunt-zerviah---one-line-for-each-individual" class="nav-link active" data-scroll-target="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual">Map of Trips to Aunt Zerviah - One line for each individual</a></li>
-  <li><a href="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual-1" id="toc-map-of-trips-to-aunt-zerviah---one-line-for-each-individual-1" class="nav-link" data-scroll-target="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual-1">Map of Trips to Aunt Zerviah - One line for each individual</a></li>
+  <li><a href="#map-of-trips-to-aunt-zerviah" id="toc-map-of-trips-to-aunt-zerviah" class="nav-link active" data-scroll-target="#map-of-trips-to-aunt-zerviah">Map of Trips to Aunt Zerviah</a></li>
+  <li><a href="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual" id="toc-map-of-trips-to-aunt-zerviah---one-line-for-each-individual" class="nav-link" data-scroll-target="#map-of-trips-to-aunt-zerviah---one-line-for-each-individual">Map of Trips to Aunt Zerviah - One line for each individual</a></li>
   </ul>
 </nav>
     </div>
@@ -171,61 +171,25 @@ ul.task-list li input[type="checkbox"] {
 
 <p><em>“They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early”</em></p>
 <p><strong>Celestia Webster’s Diary - November 13, 1867</strong></p>
-<p>Map of Trips to Aunt Z just points</p>
 <div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Map of Trips to Aunt Z just points"</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "library(tidyverse)\nlibrary(sf)\nlibrary(leaflet)\nlibrary(paletteer)\n\nzlocations &lt;- read_csv(z_locations)\n\nzlocations_sf &lt;- st_as_sf(zlocations,\n                         coords = c(lng, lat),\n                         crs = 4326)\npal &lt;- colorFactor(\n  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),\n  domain = zlocations_sf$location)\n                 leaflet() |&gt; \n\nleaflet() |&gt; \n  addTiles() |&gt;\n  addCircleMarkers(data = zlocations_sf,\n                   fillOpacity = 0.5,\n                   radius = 3) |&gt;\n  addLegend(bottomleft, pal = pal, values = zlocations_sf$location)"</code></pre>
 </div>
 </div>
-<section id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual" class="level2">
-<h2 class="anchored" data-anchor-id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual">Map of Trips to Aunt Zerviah - One line for each individual</h2>
+<section id="map-of-trips-to-aunt-zerviah" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-trips-to-aunt-zerviah">Map of Trips to Aunt Zerviah</h2>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.2.0     ✔ readr     2.2.0
-✔ forcats   1.0.1     ✔ stringr   1.6.0
-✔ ggplot2   4.0.2     ✔ tibble    3.3.1
-✔ lubridate 1.9.5     ✔ tidyr     1.3.2
-✔ purrr     1.2.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
-Linking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
-e.g.:
-  dat &lt;- vroom(...)
-  problems(dat)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 13 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr  (3): person, start, destination
-dbl  (1): journey_id
-date (1): date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 2 Columns: 4
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (2): location, address
-dbl (2): lat, lng
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-96ec864e7ce4b29fe133" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-96ec864e7ce4b29fe133">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolylines","args":[[[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193,-77.62484193],"lat":[42.79163317,42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193,-77.62484193],"lat":[42.79163317,42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":["#000000","#006565","#DC7CAF","#DC93CD","#3A4ABD","#B66DFF","#8DC5FF","#A63F31","#A05000","#A1CA11","#FFFF6D"],"weight":5,"opacity":0.8,"fill":false,"fillColor":["#000000","#006565","#DC7CAF","#DC93CD","#3A4ABD","#B66DFF","#8DC5FF","#A63F31","#A05000","#A1CA11","#FFFF6D"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,["\"Lawrence and the girls\" (Celestia's sisters - see Webster Family) attend a Social gathering","Aunt Zerviah and Louise Hayward","Aunt Zerviah, Celestia \"Lettie\" Hayward, Alice \"Allie\" Hayward","Aunt Zerviah, Mrs. Johnson, and Jennie Webster","Caroline \"Carrie\" Webster and Florence Webster","Celestia Webster","Celestia Webster and Caroline \"Carrie\" Webster","Everyone in the Webster family with the exception of Celestia, Mother, and Elizabeth \"Lib\" Webster","Mother Webster","Mother Webster and Lawrence Webster","Sue Webster"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[42.73459328,42.79163317],[-77.62621363,-77.62484193],5,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.5},null,null,null,null,["Webster Farm Main","Aunt Zerviah's House"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#000000","#006565","#DC7CAF","#DC93CD","#3A4ABD","#B66DFF","#8DC5FF","#A63F31","#A05000","#A1CA11","#FFFF6D"],"labels":["\"Lawrence and the girls\" (Celestia's sisters - see Webster Family) attend a Social gathering","Aunt Zerviah and Louise Hayward","Aunt Zerviah, Celestia \"Lettie\" Hayward, Alice \"Allie\" Hayward","Aunt Zerviah, Mrs. Johnson, and Jennie Webster","Caroline \"Carrie\" Webster and Florence Webster","Celestia Webster","Celestia Webster and Caroline \"Carrie\" Webster","Everyone in the Webster family with the exception of Celestia, Mother, and Elizabeth \"Lib\" Webster","Mother Webster","Mother Webster and Lawrence Webster","Sue Webster"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomleft","type":"factor","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[42.73459328,42.79163317],"lng":[-77.62621363,-77.62484193]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-a027a7de93de6d1c85a3" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-a027a7de93de6d1c85a3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolylines","args":[[[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62621363],"lat":[42.73459328]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193,-77.62484193],"lat":[42.79163317,42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193,-77.62484193],"lat":[42.79163317,42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]],[[{"lng":[-77.62484193],"lat":[42.79163317]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":["#000000","#006565","#DC7CAF","#DC93CD","#3A4ABD","#B66DFF","#8DC5FF","#A63F31","#A05000","#A1CA11","#FFFF6D"],"weight":5,"opacity":0.8,"fill":false,"fillColor":["#000000","#006565","#DC7CAF","#DC93CD","#3A4ABD","#B66DFF","#8DC5FF","#A63F31","#A05000","#A1CA11","#FFFF6D"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,["\"Lawrence and the girls\" (Celestia's sisters - see Webster Family) attend a Social gathering","Aunt Zerviah and Louise Hayward","Aunt Zerviah, Celestia \"Lettie\" Hayward, Alice \"Allie\" Hayward","Aunt Zerviah, Mrs. Johnson, and Jennie Webster","Caroline \"Carrie\" Webster and Florence Webster","Celestia Webster","Celestia Webster and Caroline \"Carrie\" Webster","Everyone in the Webster family with the exception of Celestia, Mother, and Elizabeth \"Lib\" Webster","Mother Webster","Mother Webster and Lawrence Webster","Sue Webster"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[42.73459328,42.79163317],[-77.62621363,-77.62484193],5,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.5},null,null,null,null,["Webster Farm Main","Aunt Zerviah's House"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.73459328,42.79163317],"lng":[-77.62621363,-77.62484193]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual-1" class="level2">
-<h2 class="anchored" data-anchor-id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual-1">Map of Trips to Aunt Zerviah - One line for each individual</h2>
+<section id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual" class="level2">
+<h2 class="anchored" data-anchor-id="map-of-trips-to-aunt-zerviah---one-line-for-each-individual">Map of Trips to Aunt Zerviah - One line for each individual</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "library(sf)\nlibrary(tidygeocoder)\nlibrary(USAboundaries)\nlibrary(tidyverse)\nlibrary(leaflet)\nlibrary(paletteer)\n\nzlocations &lt;- read.csv(z_locations.csv)\nzmovements &lt;- read.csv(z_movements.csv)\n\nzlocations_sf &lt;- st_as_sf(zlocations,\n                         coords = c(lng, lat),\n                         crs = 4326)\nzmovements_wide &lt;- zmovements |&gt; \n  arrange(date) |&gt; \n  group_by(person) |&gt;\n  ungroup() |&gt;\n  filter(!is.na(start)) |&gt;\n    rowid_to_column(journeyid)\n\nzmovements_long &lt;- zmovements_wide |&gt; \n  pivot_longer(\n    cols = start:destination,\n    names_to = type,\n    values_to = location\n  )\n\nzmovements_long_sf &lt;- zmovements_long |&gt; \n  left_join(zlocations, by = location) |&gt; \n  st_as_sf(coords = c(lng, lat), crs = 4326) |&gt; \n  group_by(journey_id) |&gt; \n  summarise(do_union = FALSE) |&gt; \n  st_cast(LINESTRING)\n\njourneys_sf &lt;- left_join(zmovements_long_sf, zmovements_wide, by = journey_id)\njourneys_sf\n\njourneys_sf &lt;- journeys_sf |&gt; \n  mutate(label = paste (\n    person, &lt;br/&gt;,\n    start, to, destination, &lt;br&gt;,\n    year(date),day(date), month(date, label = TRUE)))\n\npal &lt;- colorFactor(\n  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),\n  domain = journeys_sf$person)\n\nleaflet() |&gt; \n  addTiles() |&gt;\n  addPolylines(data = journeys_sf,\n               color = ~pal(person),\n               opacity = 0.8,\n               label = ~person) |&gt; \n  addCircleMarkers(data = zlocations_sf,\n                   fillOpacity = 0.5,\n                   radius = 5,\n                   label = ~location) |&gt; \n  addLegend(bottomleft, pal = pal, values = journeys_sf$person)"</code></pre>
