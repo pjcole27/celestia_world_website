@@ -19,6 +19,9 @@ execute:
 **Celestia Webster's Diary -October 10, 1866**
 
 ```{r}
+#| message: false
+#| warning: false
+
 library(tidyverse)
 
 csickness <- read_csv("c_sickness.csv")
@@ -44,22 +47,3 @@ familysickness |>
 ```
 
 make a line graph
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

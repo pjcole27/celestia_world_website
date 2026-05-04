@@ -8,9 +8,11 @@ execute:
 
 **Celestia Webster's Diary - November 13, 1867**
 
-Map of Trips to Aunt Z just points
+
 
 ```{r}
+"Map of Trips to Aunt Z just points"
+
 "library(tidyverse)
 library(sf)
 library(leaflet)
@@ -34,9 +36,12 @@ leaflet() |>
   addLegend(bottomleft, pal = pal, values = zlocations_sf$location)"
 ```
 
-## Map of Trips to Aunt Zerviah - One line for each individual
+## Map of Trips to Aunt Zerviah
 
 ```{r}
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(sf)
 library(leaflet)
@@ -80,10 +85,7 @@ leaflet() |>
   addCircleMarkers(data = zlocations_sf,
                    fillOpacity = 0.5,
                    radius = 5,
-                   label = ~location) |> 
-  addLegend("bottomleft", pal = pal, values = zmovements_lines$person)
-
-
+                   label = ~location)
 ```
 
 ## Map of Trips to Aunt Zerviah - One line for each individual
