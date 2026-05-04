@@ -31,6 +31,10 @@ wsickness <- subset(wsickness, select = -date)
 
 wsickness[wsickness == ""] <- NA
 
+# Combine data frames
+
+familysickness <- rbind(csickness , father, wsickness)
+
 
 
 ```
