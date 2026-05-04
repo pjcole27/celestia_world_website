@@ -11,7 +11,14 @@
     "href": "Map_C_Network.html#celestias-network-in-livinston-county",
     "title": "Mapping Celestia’s Network",
     "section": "Celestia’s Network in Livinston County",
-    "text": "Celestia’s Network in Livinston County\n\n\n\n1850 Map of Livingston County, New York\n\n\n\n\n\n\n\n\n\n1858 Survey Map of Livingston County\n\n\n\n\n\n\n\n\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\n\\ncnetwork &lt;- read.csv(C_Network.csv)\\n\\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\\nlocations\\n\\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\\nlocations_sf\\n\\nnewyork &lt;- us_counties(states = New York)\\n\\n# Find EPSG code for New York\\nstate_plane(state = NY)\\n\\n# Project\\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\\n\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) + \\n  labs(title = Celestia's Network in Livingston County)\\n  theme_minimal()\\nlocation &lt;- networklocations\\n                   filter (column_ == diary location) - this is for point map\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) +\\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))\""
+    "text": "Celestia’s Network in Livinston County\n\n\n\n1850 Map of Livingston County, New York - Library of Congress, Geography and Map Division.\n\n\n\n\n\n\n\n\n\n1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division"
+  },
+  {
+    "objectID": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
+    "href": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
+    "title": "Mapping Celestia’s Network",
+    "section": "Celestia’s Network in Livingston County, New York",
+    "text": "Celestia’s Network in Livingston County, New York\n\n\n\n\n\n\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\n\\ncnetwork &lt;- read.csv(C_Network.csv)\\n\\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\\nlocations\\n\\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\\nlocations_sf\\n\\nnewyork &lt;- us_counties(states = New York)\\n\\n# Find EPSG code for New York\\nstate_plane(state = NY)\\n\\n# Project\\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\\n\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) + \\n  labs(title = Celestia's Network in Livingston County)\\n  theme_minimal()\\nlocation &lt;- networklocations\\n                   filter (column_ == diary location) - this is for point map\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) +\\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))\""
   },
   {
     "objectID": "index.html",
@@ -33,6 +40,20 @@
     "title": "Sickness and Medicine in Celestia’s World",
     "section": "",
     "text": "“How wise and good in God to grant us friends, he has bound us together by the ties of blood that can never be sundered We should be ever trying to do each other good to help each other on in our journey to the kingdom”\nCelestia Webster’s Diary - March 31, 1866\n\nSickness in the Webster Family\n“My heart is sad at the remembrance, that for the third time our family circle was broken four months ago today, then the head of our family our noble Christian father was torn from our embrace by the rude hand of Death My life seems to be a blank since then. I am so disconsolate and do not know what to set myself about.”\nCelestia Webster’s Diary - April 1, 1866\n“Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse.”\nCelestia Webster’s Diary -October 10, 1866\n\n\n\n\n\n\n\n\n\nmake a line graph"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "#Bibliography"
+  },
+  {
+    "objectID": "about.html#maps-used",
+    "href": "about.html#maps-used",
+    "title": "About",
+    "section": "Maps Used",
+    "text": "Maps Used\nFrench, J. H, John E Gillette, and Robert Pearsall Smith. Gillette’s map of Livingston Co., New York: from actual surveys. Philadelphia: Jno. E. Gillette, publisher, 1858. Map. https://www.loc.gov/item/2013593226/.\nRea & Otley, Robert Pearsall Smith, and Smith & Gillett. Map of Livingston County, New York: from actual surveys. Philadelphia: Smith & Gillett, publishers, 1852. Map. https://www.loc.gov/item/2013593275/."
   },
   {
     "objectID": "Map_C_Zerviah.html",
