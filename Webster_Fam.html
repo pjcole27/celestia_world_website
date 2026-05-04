@@ -133,8 +133,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sickness-in-the-webster-family" id="toc-sickness-in-the-webster-family" class="nav-link active" data-scroll-target="#sickness-in-the-webster-family">Sickness in the Webster Family</a></li>
-  <li><a href="#sickness-in-livingston-county" id="toc-sickness-in-livingston-county" class="nav-link" data-scroll-target="#sickness-in-livingston-county">Sickness in Livingston County</a></li>
-  <li><a href="#celestias-health" id="toc-celestias-health" class="nav-link" data-scroll-target="#celestias-health">Celestia’s Health</a></li>
   </ul>
 </nav>
     </div>
@@ -168,12 +166,62 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Celestia Webster’s Diary - April 1, 1866</strong></p>
 <p><em>“Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse.”</em></p>
 <p><strong>Celestia Webster’s Diary -October 10, 1866</strong></p>
-</section>
-<section id="sickness-in-livingston-county" class="level3">
-<h3 class="anchored" data-anchor-id="sickness-in-livingston-county">Sickness in Livingston County</h3>
-</section>
-<section id="celestias-health" class="level3">
-<h3 class="anchored" data-anchor-id="celestias-health">Celestia’s Health</h3>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 35 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (4): month, name, sickness, quote
+dbl  (1): time
+date (1): date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 23 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (4): month, name, sickness, quote
+dbl  (1): time
+date (1): date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Webster_Fam_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>make a line graph</p>
 
 
 </section>
