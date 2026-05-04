@@ -1,5 +1,11 @@
 ---
 title: "About"
 ---
- 
 
+#Bibliography
+ 
+## Maps Used 
+
+French, J. H, John E Gillette, and Robert Pearsall Smith. Gillette's map of      Livingston Co., New York: from actual surveys. Philadelphia: Jno. E.           Gillette, publisher, 1858. Map. https://www.loc.gov/item/2013593226/.
+
+Rea & Otley, Robert Pearsall Smith, and Smith & Gillett. Map of Livingston       County, New York: from actual surveys. Philadelphia: Smith & Gillett,          publishers, 1852. Map. https://www.loc.gov/item/2013593275/.
