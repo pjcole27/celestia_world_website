@@ -37,7 +37,7 @@ familysickness <- rbind(csickness, father, wsickness)
 # ggplot
 
 familysickness |>
-  ggplot(aes(x = time, y = name, fill = ))+
+  ggplot(aes(x = name, y = time, fill = time))+
   geom_col(fill = 'blue')
   
 
