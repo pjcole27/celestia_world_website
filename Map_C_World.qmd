@@ -1,0 +1,6 @@
+---
+title: "Mapping Celestia's World"
+execute:
+  echo: false
+---
+context on maps, why mapping, notes from geneaology article
