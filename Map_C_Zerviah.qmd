@@ -1,6 +1,6 @@
 
 ---
-title: Mapping Trips to Aunt Zerviah's
+title: Trips to Aunt Zerviah's
 execute:
   echo: false
 ---

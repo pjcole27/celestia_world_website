@@ -1,5 +1,5 @@
 ---
-title: Mapping Celestia's Network
+title: Celestia's Network
 execute:
   echo: false
 ---
