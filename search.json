@@ -2,21 +2,21 @@
   {
     "objectID": "Map_C_Network.html",
     "href": "Map_C_Network.html",
-    "title": "Mapping Celestia’s Network",
+    "title": "Celestia’s Network",
     "section": "",
     "text": "“The Lord has been and is very kind to me in giving me so many friends may I ever be grateful for all his benefits.”\nCelestia Webster’s Diary - May 17, 1867"
   },
   {
     "objectID": "Map_C_Network.html#celestias-network-in-livinston-county",
     "href": "Map_C_Network.html#celestias-network-in-livinston-county",
-    "title": "Mapping Celestia’s Network",
+    "title": "Celestia’s Network",
     "section": "Celestia’s Network in Livinston County",
     "text": "Celestia’s Network in Livinston County\n\n\n\n1850 Map of Livingston County, New York - Library of Congress, Geography and Map Division.\n\n\n\n\n\n\n\n\n\n1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division"
   },
   {
     "objectID": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
     "href": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
-    "title": "Mapping Celestia’s Network",
+    "title": "Celestia’s Network",
     "section": "Celestia’s Network in Livingston County, New York",
     "text": "Celestia’s Network in Livingston County, New York\n\n\n\n\n\n\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\n\\ncnetwork &lt;- read.csv(C_Network.csv)\\n\\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\\nlocations\\n\\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\\nlocations_sf\\n\\nnewyork &lt;- us_counties(states = New York)\\n\\n# Find EPSG code for New York\\nstate_plane(state = NY)\\n\\n# Project\\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\\n\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) + \\n  labs(title = Celestia's Network in Livingston County)\\n  theme_minimal()\\nlocation &lt;- networklocations\\n                   filter (column_ == diary location) - this is for point map\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) +\\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))\""
   },
@@ -30,9 +30,16 @@
   {
     "objectID": "Map_C_Boarding.html",
     "href": "Map_C_Boarding.html",
-    "title": "Mapping Celestia’s Boarding",
+    "title": "Celestia’s Boarding",
     "section": "",
     "text": "“The school room has been very uncomfortable and I was very glad when the last lesson was heard and I ready to come to my boarding place I thought certainly it would rain, sat up some time wanting for it to rain then retired feeling that the goodness of God was about my pathway.”\nCelestia Webster’s Diary - July 17, 1866"
+  },
+  {
+    "objectID": "Map_C_World.html",
+    "href": "Map_C_World.html",
+    "title": "Mapping Celestia’s World",
+    "section": "",
+    "text": "context on maps, why mapping, notes from geneaology article"
   },
   {
     "objectID": "Webster_Fam.html",
@@ -58,21 +65,21 @@
   {
     "objectID": "Map_C_Zerviah.html",
     "href": "Map_C_Zerviah.html",
-    "title": "Mapping Trips to Aunt Zerviah’s",
+    "title": "Trips to Aunt Zerviah’s",
     "section": "",
     "text": "“They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early”\nCelestia Webster’s Diary - November 13, 1867\n[1] \"Map of Trips to Aunt Z just points\"\n\n\n[1] \"library(tidyverse)\\nlibrary(sf)\\nlibrary(leaflet)\\nlibrary(paletteer)\\n\\nzlocations &lt;- read_csv(z_locations)\\n\\nzlocations_sf &lt;- st_as_sf(zlocations,\\n                         coords = c(lng, lat),\\n                         crs = 4326)\\npal &lt;- colorFactor(\\n  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),\\n  domain = zlocations_sf$location)\\n                 leaflet() |&gt; \\n\\nleaflet() |&gt; \\n  addTiles() |&gt;\\n  addCircleMarkers(data = zlocations_sf,\\n                   fillOpacity = 0.5,\\n                   radius = 3) |&gt;\\n  addLegend(bottomleft, pal = pal, values = zlocations_sf$location)\""
   },
   {
     "objectID": "Map_C_Zerviah.html#map-of-trips-to-aunt-zerviah",
     "href": "Map_C_Zerviah.html#map-of-trips-to-aunt-zerviah",
-    "title": "Mapping Trips to Aunt Zerviah’s",
+    "title": "Trips to Aunt Zerviah’s",
     "section": "Map of Trips to Aunt Zerviah",
     "text": "Map of Trips to Aunt Zerviah"
   },
   {
     "objectID": "Map_C_Zerviah.html#map-of-trips-to-aunt-zerviah---one-line-for-each-individual",
     "href": "Map_C_Zerviah.html#map-of-trips-to-aunt-zerviah---one-line-for-each-individual",
-    "title": "Mapping Trips to Aunt Zerviah’s",
+    "title": "Trips to Aunt Zerviah’s",
     "section": "Map of Trips to Aunt Zerviah - One line for each individual",
     "text": "Map of Trips to Aunt Zerviah - One line for each individual\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\nlibrary(leaflet)\\nlibrary(paletteer)\\n\\nzlocations &lt;- read.csv(z_locations.csv)\\nzmovements &lt;- read.csv(z_movements.csv)\\n\\nzlocations_sf &lt;- st_as_sf(zlocations,\\n                         coords = c(lng, lat),\\n                         crs = 4326)\\nzmovements_wide &lt;- zmovements |&gt; \\n  arrange(date) |&gt; \\n  group_by(person) |&gt;\\n  ungroup() |&gt;\\n  filter(!is.na(start)) |&gt;\\n    rowid_to_column(journeyid)\\n\\nzmovements_long &lt;- zmovements_wide |&gt; \\n  pivot_longer(\\n    cols = start:destination,\\n    names_to = type,\\n    values_to = location\\n  )\\n\\nzmovements_long_sf &lt;- zmovements_long |&gt; \\n  left_join(zlocations, by = location) |&gt; \\n  st_as_sf(coords = c(lng, lat), crs = 4326) |&gt; \\n  group_by(journey_id) |&gt; \\n  summarise(do_union = FALSE) |&gt; \\n  st_cast(LINESTRING)\\n\\njourneys_sf &lt;- left_join(zmovements_long_sf, zmovements_wide, by = journey_id)\\njourneys_sf\\n\\njourneys_sf &lt;- journeys_sf |&gt; \\n  mutate(label = paste (\\n    person, &lt;br/&gt;,\\n    start, to, destination, &lt;br&gt;,\\n    year(date),day(date), month(date, label = TRUE)))\\n\\npal &lt;- colorFactor(\\n  palette = as.character(paletteer_d(colorBlindness::paletteMartin)),\\n  domain = journeys_sf$person)\\n\\nleaflet() |&gt; \\n  addTiles() |&gt;\\n  addPolylines(data = journeys_sf,\\n               color = ~pal(person),\\n               opacity = 0.8,\\n               label = ~person) |&gt; \\n  addCircleMarkers(data = zlocations_sf,\\n                   fillOpacity = 0.5,\\n                   radius = 5,\\n                   label = ~location) |&gt; \\n  addLegend(bottomleft, pal = pal, values = journeys_sf$person)\""
   }
