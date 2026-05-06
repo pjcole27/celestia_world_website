@@ -1,3 +1,4 @@
+
 ---
 title: Mapping Trips to Aunt Zerviah's
 execute:
@@ -7,8 +8,6 @@ execute:
 *"They have all with the exception of Mother Lib and me gone to Aunt Zerviah to spend the evening I tired out every day by dark as I have no place to lie down and rest during the day. Lib and I am going to retire early"*
 
 **Celestia Webster's Diary - November 13, 1867**
-
-
 
 ```{r}
 "Map of Trips to Aunt Z just points"

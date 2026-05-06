@@ -15,6 +15,7 @@ execute:
 [![1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division](gileslivingston.jpg){fig-alt="This is a survey map of Livingston County, New York with details on county boundaries, pop outs of important cities, and directory information" fig-align="center" width="678"}](https://www.loc.gov/resource/g3803l.la000515/?r=-0.21,-0.138,1.279,0.681,0)
 
 ## Celestia's Network in Livingston County, New York
+
 ```{r}
 #| message: false
 #| warning: false
