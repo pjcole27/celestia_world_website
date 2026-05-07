@@ -27,11 +27,11 @@ networklocations <- read_csv("C_Network.csv")
 locations_sf <- st_as_sf(networklocations,
                          coords = c("lng", "lat"),
                          crs = 4326)
-conesus <- rast("Conesus Map_modified.tif")
+livingston <- rast("1850.tif")
 
 #ggplot map with historical map
 ggplot() +
-  tidyterra::geom_spatraster_rgb(data = conesus) +
+  tidyterra::geom_spatraster_rgb(data = livingston) +
   geom_sf(data = locations_sf, fill = NA, color = "blue") +
   theme_minimal ()
 
