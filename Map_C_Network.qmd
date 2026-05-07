@@ -8,12 +8,6 @@ execute:
 
 **Celestia Webster's Diary - May 17, 1867**
 
-## Celestia's Network in Livinston County
-
-![1850 Map of Livingston County, New York - Library of Congress, Geography and Map Division.](1850map.jpg){fig-alt="This is a 1850 map of Livingston County, New York." fig-align="center" width="583"}
-
-[![1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division](gileslivingston.jpg){fig-alt="This is a survey map of Livingston County, New York with details on county boundaries, pop outs of important cities, and directory information" fig-align="center" width="678"}](https://www.loc.gov/resource/g3803l.la000515/?r=-0.21,-0.138,1.279,0.681,0)
-
 ## Celestia's Network in Livingston County, New York
 
 ```{r}
@@ -24,21 +18,40 @@ library(tidyverse)
 library(sf)
 library(leaflet)
 library(paletteer)
+library(terra)
+library(tidyterra)
+library(ggplot2)
 
 networklocations <- read_csv("C_Network.csv")
 
 locations_sf <- st_as_sf(networklocations,
                          coords = c("lng", "lat"),
                          crs = 4326)
+conesus <- rast("Conesus Map_modified.tif")
+
+#ggplot map with historical map
+ggplot() +
+  tidyterra::geom_spatraster_rgb(data = conesus) +
+  geom_sf(data = locations_sf, fill = NA, color = "blue") +
+  theme_minimal ()
+
+# Leaflet map without historical map
+
 pal <- colorFactor(
   palette = as.character(paletteer_d("colorBlindness::paletteMartin")),
-  domain = locations_sf$'diary location')
+  domain = locations_sf$`diary location`
+)
+
 
 leaflet() |> 
   addTiles() |>
   addCircleMarkers(data = locations_sf,
                    fillOpacity = 0.5,
-                   radius = 3)
+                   color = ~pal,
+                   radius = 5,
+                   label = ~ locations_sf$`diary location`) |>
+  addLegend("topleft", pal = pal, values = locations_sf$`diary location`)
+          
   
 ```
 
