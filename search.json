@@ -7,18 +7,11 @@
     "text": "“The Lord has been and is very kind to me in giving me so many friends may I ever be grateful for all his benefits.”\nCelestia Webster’s Diary - May 17, 1867"
   },
   {
-    "objectID": "Map_C_Network.html#celestias-network-in-livinston-county",
-    "href": "Map_C_Network.html#celestias-network-in-livinston-county",
-    "title": "Celestia’s Network",
-    "section": "Celestia’s Network in Livinston County",
-    "text": "Celestia’s Network in Livinston County\n\n\n\n1850 Map of Livingston County, New York - Library of Congress, Geography and Map Division.\n\n\n\n\n\n\n\n\n\n1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division"
-  },
-  {
     "objectID": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
     "href": "Map_C_Network.html#celestias-network-in-livingston-county-new-york",
     "title": "Celestia’s Network",
     "section": "Celestia’s Network in Livingston County, New York",
-    "text": "Celestia’s Network in Livingston County, New York\n\n\n\n\n\n\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\n\\ncnetwork &lt;- read.csv(C_Network.csv)\\n\\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\\nlocations\\n\\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\\nlocations_sf\\n\\nnewyork &lt;- us_counties(states = New York)\\n\\n# Find EPSG code for New York\\nstate_plane(state = NY)\\n\\n# Project\\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\\n\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) + \\n  labs(title = Celestia's Network in Livingston County)\\n  theme_minimal()\\nlocation &lt;- networklocations\\n                   filter (column_ == diary location) - this is for point map\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) +\\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))\""
+    "text": "Celestia’s Network in Livingston County, New York\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[1] \"library(sf)\\nlibrary(tidygeocoder)\\nlibrary(USAboundaries)\\nlibrary(tidyverse)\\n\\ncnetwork &lt;- read.csv(C_Network.csv)\\n\\nlocations &lt;- geo(c(Conesus, Livonia, Springwater, Hemlock))\\nlocations\\n\\nlocations_sf &lt;- st_as_sf(cnetwork, coords = c(lng, lat), crs = 4326)\\nlocations_sf\\n\\nnewyork &lt;- us_counties(states = New York)\\n\\n# Find EPSG code for New York\\nstate_plane(state = NY)\\n\\n# Project\\nlocs_proj &lt;- st_transform(locations_sf, EPSG:32146)\\nnewyork_proj &lt;- st_transform(newyork, EPSG:32116)\\n\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) + \\n  labs(title = Celestia's Network in Livingston County)\\n  theme_minimal()\\nlocation &lt;- networklocations\\n                   filter (column_ == diary location) - this is for point map\\nggplot() + \\n  geom_sf(data = newyork_proj) + \\n  geom_sf(data = locs_proj) +\\n  coord_sf(xlim = c(-76.0,-78.0),ylim = c(43.0,42.0))\""
   },
   {
     "objectID": "index.html",
