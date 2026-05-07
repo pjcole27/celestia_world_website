@@ -3,4 +3,9 @@ title: "Mapping Celestia's World"
 execute:
   echo: false
 ---
-context on maps, why mapping, notes from geneaology article
+
+context on maps, why mapping, notes from genealogy article
+
+[![1850 Map of Livingston County, New York - Library of Congress, Geography and Map Division.](images/clipboard-2030622754.png){fig-alt="Ninteenth century map from 1850 showing the different towns that make up Livingston County New York. Each town's boundaries are defined by different colors"}](https://lccn.loc.gov/2013593275)
+
+[![1858 Survey Map of Livingston County - Library of Congress, Geography and Map Division](images/clipboard-264021709.png){fig-alt="Nineteenth Century map from an 1858 survey map showing the different towns in Livingston County, New York. The different dots on the map have different names of residents who lived in the county. There are also pop outs of detailed street maps of main cities in Livingston, County including Danville, Conesus Centre, and Hemlock Lake."}](https://lccn.loc.gov/2013593226)

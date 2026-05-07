@@ -11,13 +11,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - Webster_Fam.qmd
-      - text: Mapping Celestia's World
+      - href: Webster_Fam.qmd
+      - href: Map_C_World.qmd
       - menu: 
         - Map_C_Network.qmd
         - Map_C_Boarding.qmd
         - Map_C_Zerviah.qmd
-      - about.qmd
+      - href: about.qmd
       
 
 format:
