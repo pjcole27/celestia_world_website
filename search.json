@@ -39,7 +39,21 @@
     "href": "Webster_Fam.html",
     "title": "Sickness and Medicine in Celestia’s World",
     "section": "",
-    "text": "“How wise and good in God to grant us friends, he has bound us together by the ties of blood that can never be sundered We should be ever trying to do each other good to help each other on in our journey to the kingdom”\nCelestia Webster’s Diary - March 31, 1866\n\nSickness in the Webster Family\n“My heart is sad at the remembrance, that for the third time our family circle was broken four months ago today, then the head of our family our noble Christian father was torn from our embrace by the rude hand of Death My life seems to be a blank since then. I am so disconsolate and do not know what to set myself about.”\nCelestia Webster’s Diary - April 1, 1866\n“Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse.”\nCelestia Webster’s Diary -October 10, 1866\n\n\n[1] \"familysickness |&gt;\\n  ggplot(aes(x = name, y = time, fill = time))+\\n  geom_col(fill = 'blue')\"\n\n\n\n\n\n\n\n\n\nmake a line graph"
+    "text": "“How wise and good in God to grant us friends, he has bound us together by the ties of blood that can never be sundered We should be ever trying to do each other good to help each other on in our journey to the kingdom”\nCelestia Webster’s Diary - March 31, 1866\nLorem ipsum"
+  },
+  {
+    "objectID": "Webster_Fam.html#comparing-webster-family-illness",
+    "href": "Webster_Fam.html#comparing-webster-family-illness",
+    "title": "Sickness and Medicine in Celestia’s World",
+    "section": "Comparing Webster Family Illness",
+    "text": "Comparing Webster Family Illness\n“My heart is sad at the remembrance, that for the third time our family circle was broken four months ago today, then the head of our family our noble Christian father was torn from our embrace by the rude hand of Death My life seems to be a blank since then. I am so disconsolate and do not know what to set myself about.”\nCelestia Webster’s Diary - April 1, 1866\nThe graph below examines the number of times Celestia mentions her own sickness, her father’s death, and her sister, Wealthy Webster’s sickness and death. The chart reveals the similarities and differences between symptoms, diary mentions, and time of the year.\n\n\n[1] \"familysickness |&gt;\\n  ggplot(aes(x = name, y = time, fill = time))+\\n  geom_col(fill = 'blue')\""
+  },
+  {
+    "objectID": "Webster_Fam.html#comparing-celestia-and-wealthys-sickness",
+    "href": "Webster_Fam.html#comparing-celestia-and-wealthys-sickness",
+    "title": "Sickness and Medicine in Celestia’s World",
+    "section": "Comparing Celestia and Wealthy’s Sickness",
+    "text": "Comparing Celestia and Wealthy’s Sickness\n“Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse.”\nCelestia Webster’s Diary -October 10, 1866\nThe graph below compares the symptoms and trajectory of Celestia and her sister, Wealthy’s respective illnesses. Wealthy develops tuberculosis in June 1866 and eventually dies on October 11, 1866. A few months later, in February 1867, Celestia falls ill from tuberculosis, recovers, but never returns to full health. She shows similar symptoms to Wealthy and the patterns of her sickness and treatment also resemble her sister."
   },
   {
     "objectID": "about.html",
