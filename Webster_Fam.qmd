@@ -19,7 +19,8 @@ Lorem ipsum
 
 **Celestia Webster's Diary - April 1, 1866**
 
-The graph below examines the number of times Celestia mentions her own sickness, her father's death, and her sister, Wealthy Webster's sickness and death. The chart reveals the similarities and differences between symptoms, diary mentions, and time of the year. 
+The graph below examines the number of times Celestia mentions her own sickness, her father's death, and her sister, Wealthy Webster's sickness and death. The chart reveals the similarities and differences between symptoms, diary mentions, and time of the year.
+
 ```{r}
 #| echo: false
 #| message: false
