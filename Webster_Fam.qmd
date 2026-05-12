@@ -8,16 +8,19 @@ execute:
 
 **Celestia Webster's Diary - March 31, 1866**
 
+Lorem ipsum
+
 ### Sickness in the Webster Family
+
+Lorem ipsum
+
+## Comparing Webster Family Illness
 
 *"My heart is sad at the remembrance, that for the third time our family circle was broken four months ago today, then the head of our family our noble Christian father was torn from our embrace by the rude hand of Death My life seems to be a blank since then. I am so disconsolate and do not know what to set myself about."*
 
 **Celestia Webster's Diary - April 1, 1866**
 
-*"Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse."*
-
-**Celestia Webster's Diary -October 10, 1866**
-
+The graph below examines the number of times Celestia mentions her own sickness, her father's death, and her sister, Wealthy Webster's sickness and death. The chart reveals the similarities and differences between symptoms, diary mentions, and time of the year. 
 ```{r}
 #| echo: false
 #| message: false
@@ -47,10 +50,43 @@ familysickness <- rbind(csickness, father, wsickness)
   geom_col(fill = 'blue')"
   
 ggplot(familysickness) + 
-  geom_point(aes(x = sickness, y = month, colour = name),
+  geom_point(aes(x = month, y = sickness, colour = name),
              size = 3) +
-  theme_bw()
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 ```
 
-make a line graph
+## Comparing Celestia and Wealthy's Sickness 
+
+*"Early this forenoon it rained some and has looked as though it was preparing for a heavy rain. Carrie and I sat up with Wet last night. Sue was up the most of the time too I sat on the edge of the bed fanning her and holding her hand occasionally rubbing her stomach when I was not waiting on her as she was vomiting from ten o’clock till four. She says to me I want you to stay with me as much as you can. She thinks we will not have her with us long. In the midst of her severe pain she exclaimed several times “bless the Lord” that it was no worse."*
+
+**Celestia Webster's Diary -October 10, 1866**
+
+The graph below compares the symptoms and trajectory of Celestia and her sister, Wealthy's respective illnesses. Wealthy develops tuberculosis in June 1866 and eventually dies on October 11, 1866. A few months later, in February 1867, Celestia falls ill from tuberculosis, recovers, but never returns to full health. She shows similar symptoms to Wealthy and the patterns of her sickness and treatment also resemble her sister.  
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+csickness <- read_csv("c_sickness.csv",
+                      col_types = cols(
+                        date = col_date(
+                          "%Y-%d-%m"
+                        )
+                      ))
+wsickness <- read.csv("w_sickness.csv")
+
+sistersickness <- rbind(csickness, wsickness)
+
+ggplot(sistersickness) + 
+  geom_point(aes(x = month, y = sickness, colour = name),
+             size = 3) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
+
+```
+
