@@ -53,6 +53,7 @@ ggplot(familysickness) +
              size = 3) +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
+
 ```
 
 ## Comparing Celestia and Wealthy's Sickness 
@@ -85,7 +86,6 @@ ggplot(sistersickness) +
   geom_point(aes(x = month, y = sickness, colour = name),
              size = 3) +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
-
 
 ```
 
